@@ -1,0 +1,12 @@
+Cheking Github WebHook bt commiting this file 
+
+to confiugre webhook
+
+goto -repo - settings -- webhook --add webhook
+
+add  [ jenkinsh-home-url:8080//hithub-webhook/ ]
+
+select indivisul events ex push requesr , pushesh
+
+go to genkins
+congig -- built triggerv --github hookstrigger for GITScm
