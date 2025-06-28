@@ -1,20 +1,18 @@
 pipeline {
-agent {
-  label 'DevServer'
-}
+	agent {
+		label 'DevServer'
+	}
 
-    stages {
-        stage('Build') {
-            steps {
-               sh 'mvn clean package'
-            }
-		
-		post {
-		success {
-		    archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+	stages {
+		stage('Build') {
+			steps {
+				sh 'mvn clean package'
+			}
+			post {
+				success {
+					archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+				}
+			}
 		}
-		}
-
-        }
-    }
+	}
 }
